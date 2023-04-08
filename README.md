@@ -53,5 +53,6 @@ The University of Chicago
 ### Lecture 6 (April 6): Conditional entropy, mutual information, symbol codes
 - Suggested readings:
     - Chap 1-2, 4.1-4.3, 5.1-5.3, 8 of MacKay (2005) [_Information Theory, Inference, and Learning Algorithms_](http://www.inference.org.uk/itprnn/book.pdf) 
+    - Wikipedia article on [Z-channels](https://en.wikipedia.org/wiki/Z-channel_(information_theory))
 
 
