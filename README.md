@@ -16,8 +16,9 @@ The University of Chicago
     - Sounak: Friday 3-4 pm (Jones 308)
 
 ## Assignments
-- [Assignment 1: Bayesian decision theory](https://github.com/aschein/stat_348/blob/main/assignments/hw1/hw1.ipynb). Due **Monday April 3 at 11:59pm** on Canvas. 
-- [Assignment 2: Logistic regression and beta-binomial updating](https://github.com/aschein/stat_348/blob/main/assignments/hw2/hw2.ipynb). Due **Monday April 10 at 11:59pm** on Canvas. 
+- [Assignment 1: Bayesian decision theory](https://github.com/aschein/stat_348/blob/main/assignments/hw1/hw1.ipynb). Due **Monday April 3 at 11:59pm** on GradeScope. 
+- [Assignment 2: Logistic regression and beta-binomial updating](https://github.com/aschein/stat_348/blob/main/assignments/hw2/hw2.ipynb). Due **Monday April 10 at 11:59pm** on GradeScope. 
+- [Assignment 3: Exponential families, conjugacy, and entropy](https://github.com/aschein/stat_348/blob/main/assignments/hw3/hw3.pdf). Due **Monday April 17 at 11:59pm** on GradeScope. 
 
 ## Schedule
 
