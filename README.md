@@ -32,15 +32,26 @@ The University of Chicago
 
 ### Lecture 2 (March 25): Bayesian and frequentist decision theory
 - Suggested readings:
-   - Chap 1 of Berger (1985) [Statistical Decision Theory and Bayesian Analysis](https://link.springer.com/book/10.1007/978-1-4757-4286-2) (see Canvas for e-copy)
+   - Chap 1 of Berger (1985) [_Statistical Decision Theory and Bayesian Analysis_](https://link.springer.com/book/10.1007/978-1-4757-4286-2) (see Canvas for e-copy)
 
 ### Lecture 3 (March 28): Supervised learning, posterior updating, empirical Bayes
 - Suggested readings:
-    - Chap 2 of [_Elements of Statistical Learning_](https://hastie.su.domains/ElemStatLearn/)
+    - Chap 2 of Hastie et al. (2009) [_Elements of Statistical Learning_](https://hastie.su.domains/ElemStatLearn/)
 - Materials:
     - [Slides](https://github.com/aschein/stat_348/blob/main/materials/3_logreg_and_beta_binomial.pdf)
 
 ### Lecture 4 (March 30): Conjugacy and the exponential families
 - Suggested readings:
     - [David Blei's lecture notes](http://www.cs.columbia.edu/~blei/fogm/2015F/notes/exponential-family.pdf)
+   
+### Lecture 5 (April 4): Prior & predictive distributions, exponential families, information theory
+- Suggested readings:
+    - Fong & Holmes (2020) [On the marginal likelihood and cross-validation](https://github.com/aschein/stat_348/blob/main/materials/FongHolmes2020.pdf)
+    - Chap 9.1-9.2 of Murphy (2012) [_Machine Learning: A Probabilistic Perspective_](http://noiselab.ucsd.edu/ECE228/Murphy_Machine_Learning.pdf)
+    - Chap 14 of [John Duchi's lecture notes on info theory](https://anilkeshwani.github.io/files/John-Duchi-Statistics-311-Electrical-Engineering-377.pdf)
+
+### Lecture 6 (April 6): Conditional entropy, mutual information, symbol codes
+- Suggested readings:
+    - Chap 1-2, 4.1-4.3, 5.1-5.3, 8 of MacKay (2005) [_Information Theory, Inference, and Learning Algorithms_](http://www.inference.org.uk/itprnn/book.pdf) 
+
 
