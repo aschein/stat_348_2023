@@ -1,0 +1,167 @@
+% !TEX root = main.tex
+
+
+\usepackage{centernot}
+\usepackage{amsthm}
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{mathtools}
+\usepackage{amsbsy}
+\usepackage{amstext}
+\usepackage{amsthm}
+%\usepackage{amssymb}
+\usepackage{thmtools}
+\usepackage{thm-restate}
+
+% compatibility w/ parskip https://tex.stackexchange.com/questions/25346/wrong-spacing-before-theorem-environment-amsthm
+\begingroup
+    \makeatletter
+    \@for\theoremstyle:=definition,remark,plain\do{%
+        \expandafter\g@addto@macro\csname th@\theoremstyle\endcsname{%
+            \addtolength\thm@preskip\parskip
+            }%
+        }
+\endgroup
+
+\DeclareRobustCommand{\mb}[1]{\ensuremath{\mathbf{\boldsymbol{#1}}}}
+% \DeclareRobustCommand{\mb}[1]{\mathbold{#1}}
+
+\DeclareRobustCommand{\KL}[2]{\ensuremath{\textrm{KL}\left(#1\;\|\;#2\right)}}
+
+% \DeclareMathOperator*{\argmax}{arg\,max}
+% \DeclareMathOperator*{\argmin}{arg\,min}
+
+\crefname{lemma}{lemma}{lemmas}
+\Crefname{lemma}{Lemma}{Lemmas}
+\crefname{thm}{theorem}{theorems}
+\Crefname{thm}{Theorem}{Theorems}
+\crefname{prop}{proposition}{propositions}
+\Crefname{prop}{Proposition}{Propositions}
+\crefname{assumption}{assumption}{assumptions}
+\crefname{assumption}{Assumption}{Assumptions}
+
+
+% \newtheorem{thm}{Theorem} % reset theorem numbering for each chapter
+% \newtheorem{defn}{Definition} % definition numbers are dependent on theorem numbers
+% \newtheorem{prop}[thm]{Proposition}
+% \newtheorem{exmp}[thm]{Example} % same for example numbers
+% \newtheorem{lemma}[thm]{Lemma}
+% \newtheorem{assumption}{Assumption}
+% \newtheorem{corollary}[thm]{Corollary}
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\newcommand{\grad}{\nabla}
+
+\renewcommand{\mid}{~\vert~}
+\newcommand{\prm}{\:;\:}
+
+\newcommand{\mbw}{\mb{w}}
+\newcommand{\mbW}{\mb{W}}
+
+\newcommand{\mbx}{\mb{x}}
+\newcommand{\mbX}{\mb{X}}
+
+\newcommand{\mby}{\mb{y}}
+\newcommand{\mbY}{\mb{Y}}
+
+\newcommand{\mbz}{\mb{z}}
+\newcommand{\mbZ}{\mb{Z}}
+\newcommand{\mbT}{\mb{T}}
+\newcommand{\mbA}{\mb{A}}
+\newcommand{\mba}{\mb{a}}
+
+\newcommand{\mbI}{\mb{I}}
+\newcommand{\mbone}{\mb{1}}
+
+\newcommand{\mbL}{\mb{L}}
+
+\newcommand{\mbtheta}{\mb{\theta}}
+\newcommand{\mbTheta}{\mb{\Theta}}
+\newcommand{\mbomega}{\mb{\omega}}
+\newcommand{\mbOmega}{\mb{\Omega}}
+\newcommand{\mbsigma}{\mb{\sigma}}
+\newcommand{\mbSigma}{\mb{\Sigma}}
+\newcommand{\mbphi}{\mb{\phi}}
+\newcommand{\mbPhi}{\mb{\Phi}}
+
+\newcommand{\mbalpha}{\mb{\alpha}}
+\newcommand{\mbbeta}{\mb{\beta}}
+\newcommand{\mbgamma}{\mb{\gamma}}
+\newcommand{\mbeta}{\mb{\eta}}
+\newcommand{\mbmu}{\mb{\mu}}
+\newcommand{\mbrho}{\mb{\rho}}
+\newcommand{\mblambda}{\mb{\lambda}}
+\newcommand{\mbzeta}{\mb{\zeta}}
+
+\newcommand\dif{\mathop{}\!\mathrm{d}}
+\newcommand{\diag}{\textrm{diag}}
+\newcommand{\supp}{\textrm{supp}}
+
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\bbH}{\mathbb{H}}
+
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\Gam}{\textrm{Gam}}
+\newcommand{\InvGam}{\textrm{InvGam}}
+
+% \newcommand{\qedsymbol}{\rule{0.7em}{0.7em}}
+
+\newcommand{\g}{\, | \,}
+\newcommand{\s}{\, ; \,}
+
+\newcommand{\indpt}{\protect\mathpalette{\protect\independenT}{\perp}}
+\newcommand{\E}[2]{\mathbb{E}_{#1}\left[#2\right]}
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+
+\usepackage{booktabs,arydshln}
+\makeatletter
+\def\adl@drawiv#1#2#3{%
+        \hskip.5\tabcolsep
+        \xleaders#3{#2.5\@tempdimb #1{1}#2.5\@tempdimb}%
+                #2\z@ plus1fil minus1fil\relax
+        \hskip.5\tabcolsep}
+\newcommand{\cdashlinelr}[1]{%
+  \noalign{\vskip\aboverulesep
+           \global\let\@dashdrawstore\adl@draw
+           \global\let\adl@draw\adl@drawiv}
+  \cdashline{#1}
+  \noalign{\global\let\adl@draw\@dashdrawstore
+           \vskip\belowrulesep}}
+\makeatother
+
+\newenvironment{proofsk}{%
+  \renewcommand{\proofname}{Proof sketch}\proof}{\endproof}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+%********************************************************************
+% Extra theorem environments
+%********************************************************************
+
+\declaretheorem[style=plain,numberwithin=section,name=Theorem]{theorem}
+\declaretheorem[style=plain,sibling=theorem,name=Lemma]{lemma}
+\declaretheorem[style=plain,sibling=theorem,name=Proposition]{proposition}
+\declaretheorem[style=plain,sibling=theorem,name=Corollary]{cor}
+\declaretheorem[style=plain,sibling=theorem,name=Claim]{claim}
+\declaretheorem[style=plain,sibling=theorem,name=Conjecture]{conj}
+\declaretheorem[style=definition,sibling=theorem,name=Definition]{defn}
+\declaretheorem[style=definition,name=Assumption]{assumption}
+\declaretheorem[style=definition,sibling=theorem,name=Example]{example}
+\declaretheorem[style=remark,sibling=theorem,name=Remark]{remark}
+
+\newenvironment{example*}
+ {\pushQED{\qed}\example}
+ {\popQED\endexample}
+\numberwithin{equation}{section}

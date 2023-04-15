@@ -1,0 +1,86 @@
+% This file contains definitions of custom macros
+% ------------------------------------------------------------------------------
+
+\newcommand{\defnphrase}[1]{\emph{#1}}
+
+\global\long\def\floor#1{\lfloor#1\rfloor}
+
+%\newcommand{\st}{\,:\,}
+\newcommand{\defeq}{\coloneqq}
+\newcommand{\asympeq}{\ \sim\ }
+
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\NNReals}{\Reals_{+}}
+
+
+\newcommand{\exclude}{\backslash}
+
+\newcommand{\eps}{\varepsilon}
+
+\renewcommand{\Re}{\mathrm{Re}}
+\renewcommand{\Im}{\mathrm{Im}}
+
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\logit}{logit}
+
+
+% Graph theory
+\newcommand{\edges}{e}
+\newcommand{\vertices}{v}
+\newcommand{\loops}{l}
+
+
+% Probability
+\newcommand{\EE}{\mathbb{E}}
+\renewcommand{\Pr}{\mathrm{P}}
+\newcommand{\convPr}{\xrightarrow{\,p\,}}
+\newcommand{\convDist}{\xrightarrow{\,d\,}}
+\newcommand{\equaldist}{\overset{d}{=}}
+\newcommand{\upto}{\!\uparrow\!}
+\newcommand{\given}{\mid}
+\newcommand{\as}{\textrm{ a.s.}}
+\newcommand{\equalas}{\overset{\mathrm{a.s.}}{=}}
+\newcommand{\abs}[1]{\left\lvert#1 \right\rvert}
+\newcommand{\intd}{\mathrm{d}}
+\newcommand{\dist}{\ \sim\ }
+\newcommand{\distiid}{\overset{\mathrm{iid}}{\dist}}
+\newcommand{\distind}{\overset{ind}{\dist}}
+\newcommand{\dtv}[1]{\|#1\|_{\mathrm{TV}}}
+%\newcommand{\PP}{\Pi}
+\newcommand{\PPDist}{\mathrm{PP}}
+
+\newcommand{\Lebesgue}{\Lambda}
+\newcommand{\NatSubs}[1]{\tilde \Nats_{#1}}
+
+% Causality
+\newcommand{\cdo}{\mathrm{do}} 
+
+% Distributions
+\newcommand{\diriDist}{\mathrm{Diri}}
+\newcommand{\categDist}{\mathrm{Cat}}
+\newcommand{\betaDist}{\mathrm{Beta}}
+\newcommand{\bernDist}{\mathrm{Bern}}
+\newcommand{\binDist}{\mathrm{Bin}}
+\newcommand{\uniDist}{\mathrm{Uni}}
+\newcommand{\poiDist}{\mathrm{Poi}}
+\newcommand{\gammaDist}{\mathrm{Gamma}}
+\newcommand{\multiDist}{\mathrm{Multi}}
+
+
+% \Set command
+\providecommand\given{} % so it exists
+\newcommand\SetSymbol[1][]{
+  \nonscript\,#1:\nonscript\,\mathopen{}\allowbreak}
+\DeclarePairedDelimiterX\Set[1]{\lbrace}{\rbrace}%
+{ \renewcommand\given{\SetSymbol[]} #1 }
+
+% Indicator
+\newcommand{\Ind}{\mathbbm{1}}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

@@ -1,0 +1,140 @@
+\pdfoutput=1
+\documentclass{article}
+
+% alptex + small aesthetic tweaks + some extra math defs
+\input{preamble.tex}
+% bibtex import + some code to strip away useless bib info (volume number, isbn, and the ilk), and to standardize capitalization
+% warning: the arxiv uses an outdated bibtex, which causes cryptic and frustrating upload errors 
+% easiest solution: install texlive 2016 from ftp://tug.org/historic/systems/texlive/ (download the ISO) and compile using the texlive 2016 pdflatex and bibtex
+% alternatively, look upon https://github.com/plk/biblatex/wiki/biblatex-and-the-arXiv and despair. 
+
+%********************************************************************
+% Extra definitions
+%********************************************************************
+\usepackage{natbib,wrapfig}
+\usepackage{enumitem} % tight enumerates
+\usepackage[separate-uncertainty=true,multi-part-units=single]{siunitx} % better table control
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage[affil-it]{authblk}
+
+\usepackage{titling}
+\setlength{\droptitle}{-2.5cm}
+
+\title{Assignment 3: Exponential families, conjugacy, and entropy}
+\date{} 
+\author{Stat 348, Spring 2023}
+
+
+\begin{document}
+\maketitle
+
+% \begin{abstract}
+% \end{abstract}
+\vspace{-2em}
+\textbf{Instructions:} Submit a well-formatted LaTeX document with your answers, using the same (sub)section names as this document. Show your steps---your answers should contain complete proofs.
+
+\textbf{Due:} Monday, April 17 at 11:59PM on GradeScope.
+
+\section*{Problem 1: Exponential-gamma conjugacy}
+For this problem, use the following facts.
+
+The exponential distribution with rate $\mu>0$ has PDF
+\begin{align}
+\label{eq:expon}
+P(x \mid \mu) = \textrm{Expon}(x; \mu) =  \mu \exp(-\mu x), \,\,\, x>0
+\end{align}
+
+The gamma distribution with shape $a>0$ and rate $b>0$ has PDF
+\begin{align}
+\label{eq:gamma}
+P(x \mid a, b) = \textrm{Gam}(x; a,\,b) = \frac{b^a}{\Gamma(a)} x^{a-1} \exp(-bx), \,\,\, x>0
+\end{align}
+
+In general, an exponential family distribution takes the following form:
+\begin{align}
+\label{eq:expfam}
+P(x \mid \eta) = h(x) \exp\left(\eta^\top t(x) - a(\eta)\right)
+\end{align}
+where $h(x)$ is the base measure, $\eta$ are the natural parameters, $t(x)$ are the sufficient statistics, and $a(\eta)$ is the log-normalizer.
+
+A conjugate prior for $\eta$ is also exponential family and takes the following form
+\begin{align}
+\label{eq:conjugate}
+P(\eta \mid \lambda) = h_c(\eta) \, \exp\left(\lambda_1^\top \eta - \lambda_0 \, a_\ell(\eta) -a_c(\lambda)\right)
+\end{align}
+where $\lambda = [\lambda_1, \lambda_0]$ are the natural parameters for the conjugate prior, $t(\eta)=[\eta, -a_\ell(\eta)]$ are its sufficient statistics, and $a_c(\lambda)$ is its log-normalizer. Note that $a_\ell(\eta)$ is the log-normalizer of the likelihood $P(x \mid \eta)$, while $a_c(\lambda)$ is the log-normalizer of the prior $P(\eta \mid \lambda)$.
+
+\subsection*{1.1: Exponential family forms [10 points]} 
+
+Provide exponential family forms for the exponential and gamma distributions. (This means defining $h(x)$, $t(x)$, $\eta$, and $a(\eta)$ and confirming that~\cref{eq:expfam} equals the PDFs above.)
+
+\subsection*{1.2: Conjugacy [10 points]}
+
+Use~\cref{eq:conjugate}, to show that if the likelihood $P(x \mid \mu)$ is exponential (\cref{eq:expon}), then the conjugate prior for $\mu$ is a gamma distribution $P(\mu \mid a, b)$ (\cref{eq:gamma}). 
+
+\subsection*{1.3: Posterior [10 points]}
+Provide the form of the gamma posterior $P(\mu \mid x_{1:n}, a, b)$ where $x_{1:n} \equiv x_1, \dots, x_n$, and $x_i \stackrel{\textrm{iid}}{\sim} P(x \mid \mu)$.
+
+\subsection*{1.4: Prior predictive distribution [10 points]}
+
+Derive the prior predictive distribution $P(x_1 \mid a, b) \!=\! \int P(x_1 \mid \mu) \, P(\mu \mid a, b) \,d\mu$ for one data point $x_1$.\looseness=-1
+
+\subsection*{1.5: Posterior predictive distribution [10 points]} 
+
+Derive the posterior predictive distribution $P(x_{n+1} \mid x_{1:n}, a, b) \!=\! \int P(x_{n+1} \mid \mu) \, P(\mu \mid x_{1:n}, a, b) \,d\mu$ for a single new point $x_{n+1}$ conditional on a data set $x_{1:n}$.\looseness=-1
+
+\section*{Problem 2: Gamma-Poisson and entropy}
+For this problem, use the following facts.
+
+The Poisson distribution with rate $\mu>0$ has PMF
+\begin{equation}
+P(x \mid \mu) = \textrm{Pois}(x; \mu) = \frac{\mu^x}{x!} \exp(-\mu), \,\,\, x \in \{1,2,\dots\}
+\end{equation}
+
+The negative binomial distribution with shape $r>0$ and probability parameter $p \in (0,1)$ has PMF
+\begin{equation}
+P(x \mid r,\, p) = \textrm{NB}(x; r,\, p) = \frac{\Gamma(x+r)}{x! \Gamma(r)} (1-p)^x p^r, \,\,\, x \in \{1,2,\dots\}
+\end{equation}
+
+A gamma-Poisson mixture is equal to a negative binomial
+\begin{equation}
+\int_{0}^\infty \textrm{Pois}(x; \mu) \,\textrm{Gam}(\mu; a,\,b) \,d\mu = \textrm{NB}(x; a,\, \tfrac{1}{1+b})
+\end{equation}
+
+\subsection*{2.1: Posterior [5 points]}
+If $x \sim \textrm{Pois}(\mu)$ and $\mu \sim \textrm{Gam}(a, b)$, what is the posterior $P(\mu \mid x, a, b)$?
+
+\subsection*{2.2: Exponential family forms [10 points]} 
+Provide an exponential family form for the Poisson distribution.
+
+In addition, provide an exponential family form for the negative binomial distribution \textit{with known $r$}---this means only $p$ is treated as a parameter, while $r$ is treated as a known constant (e.g., like $\pi$ or $e$).
+
+\subsection*{2.3: KL divergence between two Poissons [10 points]} Use the exponential family form of the Poisson to derive the Kullback-Leibler (KL) divergence between two Poisson distributions, $\textrm{KL}(\textrm{Pois}(x; \mu_1) \,||\, \textrm{Pois}(x; \mu_2))$. Use the natural-log ($\ln$) form of KL divergence: 
+$\textrm{KL}(P(x) \,||\, Q(x)) = \sum_{x \in \mathcal{X}} P(x) \ln\left[\frac{P(x)}{Q(x)}\right]$.
+
+\subsection*{2.4: Poisson and negative binomial entropies [25 points]}
+
+Define the following three quantities.
+
+The entropy of a negative binomial distribution with shape $a$ and probability parameter $\tfrac{1}{1+b}$:
+\begin{align}
+H\Big(\textrm{NB}(a, \tfrac{1}{1+b})\Big) &= -\sum_{x=0}^\infty \textrm{NB}(x;\, a, \tfrac{1}{1+b})\, \ln \left[\textrm{NB}(x;\,a, \tfrac{1}{1+b})\right]
+% 
+\intertext{The entropy of a Poisson distribution with rate $y$:}
+% 
+H\Big(\textrm{Pois}(y)\Big) &= -\sum_{x=0}^\infty \textrm{Pois}(x; y) \ln \left[\textrm{Pois}(x; y)\right]
+% 
+\intertext{The conditional entropy of a Poisson, conditioned on a gamma prior over $y$ with shape $a$ and rate $b$:}
+% 
+H\Big(\textrm{Pois}(y) \mid \textrm{Gam}(a, b)\Big) &= \int_0^\infty H\Big(\textrm{Pois}(y)\Big) \,\, \textrm{Gam}(y; a, b) \,dy 
+\end{align}
+
+Show that the entropy of the negative binomial is lower bounded:
+\begin{align} 
+H\Big(\textrm{NB}(a, \tfrac{1}{1+b})\Big) \geq H\Big(\textrm{Pois}(y) \mid \textrm{Gam}(a, b)\Big).
+\end{align}
+
+\end{document}
+
+

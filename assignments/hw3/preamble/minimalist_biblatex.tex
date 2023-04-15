@@ -1,0 +1,57 @@
+\usepackage[%
+minnames=1,maxnames=99,maxcitenames=2,
+style=alphabetic,
+doi=false,
+url=false,
+firstinits=true,
+hyperref,
+natbib,
+backend=bibtex,
+sorting=nyt
+]{biblatex}%
+
+\newbibmacro*{journal}{%
+  \iffieldundef{journaltitle}
+    {}
+    {\printtext[journaltitle]{%
+       \printfield[noformat]{journaltitle}%
+       \setunit{\subtitlepunct}%
+       \printfield[noformat]{journalsubtitle}}}}
+
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{titlecase}{\MakeSentenceCase*{#1}}
+
+\AtEveryBibitem{%
+\ifentrytype{article}{
+    \clearfield{url}%
+    \clearfield{urldate}%
+    \clearfield{eprint}
+}{}
+\ifentrytype{book}{
+    \clearfield{url}%
+    \clearfield{urldate}%
+}{}
+\ifentrytype{collection}{
+    \clearfield{url}%
+    \clearfield{urldate}%
+}{}
+\ifentrytype{incollection}{
+    \clearfield{url}%
+    \clearfield{urldate}%
+}{}
+}
+
+\AtEveryBibitem{
+    \clearfield{pages}
+    \clearfield{review}%
+    \clearfield{series}%%
+    \clearfield{volume}
+    \clearfield{pages}
+    \clearfield{month}
+    \clearfield{eprint}
+    \clearfield{isbn}
+    \clearfield{issn}
+    \clearlist{location}
+    \clearfield{series}
+    \clearlist{publisher}
+    \clearname{editor}
+}{}
