@@ -42,17 +42,26 @@ The University of Chicago
 
 ### Lecture 4 (March 30): Conjugacy and the exponential families
 - Suggested readings:
-    - [David Blei's lecture notes](http://www.cs.columbia.edu/~blei/fogm/2015F/notes/exponential-family.pdf)
+    - David Blei's [lecture notes](http://www.cs.columbia.edu/~blei/fogm/2015F/notes/exponential-family.pdf) on exponential families
    
 ### Lecture 5 (April 4): Prior & predictive distributions, exponential families, information theory
 - Suggested readings:
     - Fong & Holmes (2020) [On the marginal likelihood and cross-validation](https://github.com/aschein/stat_348/blob/main/materials/FongHolmes2020.pdf)
     - Chap 9.1-9.2 of Murphy (2012) [_Machine Learning: A Probabilistic Perspective_](http://noiselab.ucsd.edu/ECE228/Murphy_Machine_Learning.pdf)
-    - Chap 14 of [John Duchi's lecture notes on info theory](https://anilkeshwani.github.io/files/John-Duchi-Statistics-311-Electrical-Engineering-377.pdf)
+    - Chap 14 of John Duchi's [lecture notes](https://anilkeshwani.github.io/files/John-Duchi-Statistics-311-Electrical-Engineering-377.pdf) on info theory
 
 ### Lecture 6 (April 6): Conditional entropy, mutual information, symbol codes
 - Suggested readings:
     - Chap 1-2, 4.1-4.3, 5.1-5.3, 8 of MacKay (2005) [_Information Theory, Inference, and Learning Algorithms_](http://www.inference.org.uk/itprnn/book.pdf) 
     - Wikipedia article on [Z-channels](https://en.wikipedia.org/wiki/Z-channel_(information_theory))
 
+### Lecture 7 (April 11): Probabilistic graphical models (PGMs)
+- Suggested readings:
+    - Chap 2 of Jordan (2003) [_An Introduction to Probabilistic Graphical Models_](https://people.cs.pitt.edu/~milos/courses/cs3750-Spring2020/Readings/Graphical_models/chapter2.pdf)
+    - David Blei's [lecture notes](http://www.cs.columbia.edu/~blei/fogm/2016F/doc/graphical-models.pdf) on PGMs
 
+### Lecture 8 (April 13): Inference in PGMS: variable elimination, belief propagation, forwards-backwards
+- Suggested readings:
+    - Chap 3 of Jordan (2003) [_An Introduction to Probabilistic Graphical Models_](https://people.cs.pitt.edu/~milos/courses/cs3750-Spring2020/Readings/Graphical_models/chapter3.pdf)
+    - David Blei's [lecture notes](http://www.cs.columbia.edu/~blei/fogm/2016F/doc/inference.pdf) on inference in PGMs
+    - Ramesh Sridharan's [lecture notes](https://people.csail.mit.edu/rameshvs/content/hmms.pdf) on HMMs
