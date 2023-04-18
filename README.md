@@ -64,10 +64,13 @@ The University of Chicago
 - Suggested readings:
     - [Chap 3]((https://people.cs.pitt.edu/~milos/courses/cs3750-Spring2020/Readings/Graphical_models/chapter3.pdf)) and [chap 4](https://people.cs.pitt.edu/~milos/courses/cs3750-Spring2020/Readings/Graphical_models/chapter4.pdf) of Jordan (2003) _An Introduction to Probabilistic Graphical Models_
     - David Blei's [lecture notes](http://www.cs.columbia.edu/~blei/fogm/2016F/doc/inference.pdf) on inference in PGMs
-
+   
 ### Lecture 9 (April 18): HMMs and the forwards-backwards algorithm
+Suggested readings:
     - David Blei's [lecture notes](http://www.cs.columbia.edu/~blei/fogm/2016F/doc/inference.pdf) on inference in PGMs
     - Scott Linderman's [lecture notes](https://github.com/slinderman/stats305c/blob/spring2023/slides/lecture13_hmms.pdf) on HMMs
+    - Ramesh Sridharan's [lecture notes](https://people.csail.mit.edu/rameshvs/content/hmms.pdf) on HMMs
+    - Chap 13 (specifically 13.2.2-13.2.4) of Bishop (2006) [_Pattern Recognition and Machine Learning_](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
     
 
 
