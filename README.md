@@ -19,6 +19,7 @@ The University of Chicago
 - [Assignment 1: Bayesian decision theory](https://github.com/aschein/stat_348/blob/main/assignments/hw1/hw1.ipynb). Due **Monday April 3 at 11:59pm** on GradeScope. 
 - [Assignment 2: Logistic regression and beta-binomial updating](https://github.com/aschein/stat_348/blob/main/assignments/hw2/hw2.ipynb). Due **Monday April 10 at 11:59pm** on GradeScope. 
 - [Assignment 3: Exponential families, conjugacy, and entropy](https://github.com/aschein/stat_348/blob/main/assignments/hw3/hw3.pdf). Due **Monday April 17 at 11:59pm** on GradeScope. 
+- [Assignment 4: HMMs, belief propagation, variable elimination](https://github.com/aschein/stat_348/blob/main/assignments/hw4/hw4.pdf). Due **Monday May 1 at 11:59pm** on GradeScope. 
 
 ## Schedule
 
@@ -62,17 +63,22 @@ The University of Chicago
 
 ### Lecture 8 (April 13): Inference in PGMS: variable elimination, belief propagation
 - Suggested readings:
-    - [Chap 3]((https://people.cs.pitt.edu/~milos/courses/cs3750-Spring2020/Readings/Graphical_models/chapter3.pdf)) and [chap 4](https://people.cs.pitt.edu/~milos/courses/cs3750-Spring2020/Readings/Graphical_models/chapter4.pdf) of Jordan (2003) _An Introduction to Probabilistic Graphical Models_
+    - [Chap 3](https://people.cs.pitt.edu/~milos/courses/cs3750-Spring2020/Readings/Graphical_models/chapter3.pdf) and [chap 4](https://people.cs.pitt.edu/~milos/courses/cs3750-Spring2020/Readings/Graphical_models/chapter4.pdf) of Jordan (2003) _An Introduction to Probabilistic Graphical Models_
     - David Blei's [lecture notes](http://www.cs.columbia.edu/~blei/fogm/2016F/doc/inference.pdf) on inference in PGMs
    
 ### Lecture 9 (April 18): HMMs and the forwards-backwards algorithm
 - Suggested readings:
     - David Blei's [lecture notes](http://www.cs.columbia.edu/~blei/fogm/2016F/doc/inference.pdf) on inference in PGMs
-    - Scott Linderman's [lecture notes](https://github.com/slinderman/stats305c/blob/spring2023/slides/lecture13_hmms.pdf) on HMMs
+    - Scott Linderman's [slides](https://github.com/slinderman/stats305c/blob/spring2023/slides/lecture13_hmms.pdf) on HMMs
     - Ramesh Sridharan's [lecture notes](https://people.csail.mit.edu/rameshvs/content/hmms.pdf) on HMMs
     - Chap 13 (specifically 13.2.2-13.2.4) of Bishop (2006) [_Pattern Recognition and Machine Learning_](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
+
+### Midterm (April 20)
+
+### Lecture 10 (April 25): Baum-Welch, EM, mixture models
+- Suggested readings:
+    - Chap 9 of Bishop (2006) [_Pattern Recognition and Machine Learning_](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
+    - Scott Linderman's [slides](https://github.com/slinderman/stats305c/blob/spring2023/slides/lecture08-em.pdf) on EM
+    - Scott Linderman's [slides](https://github.com/slinderman/stats305c/blob/spring2023/slides/lecture13_hmms.pdf) on HMMs
     
- 
-
-
 
