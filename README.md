@@ -19,7 +19,7 @@ The University of Chicago
 - [Assignment 1: Bayesian decision theory](https://github.com/aschein/stat_348/blob/main/assignments/hw1/hw1.ipynb). Due **Monday April 3 at 11:59pm** on GradeScope. 
 - [Assignment 2: Logistic regression and beta-binomial updating](https://github.com/aschein/stat_348/blob/main/assignments/hw2/hw2.ipynb). Due **Monday April 10 at 11:59pm** on GradeScope. 
 - [Assignment 3: Exponential families, conjugacy, and entropy](https://github.com/aschein/stat_348/blob/main/assignments/hw3/hw3.pdf). Due **Monday April 17 at 11:59pm** on GradeScope. 
-- [Assignment 4: HMMs, belief propagation, variable elimination](https://github.com/aschein/stat_348/blob/main/assignments/hw4/hw4.pdf). Due **Monday May 1 at 11:59pm** on GradeScope. 
+- [Assignment 4: HMMs, belief propagation, variable elimination](https://github.com/aschein/stat_348/blob/main/assignments/hw4/hw4.pdf). Due **Tuesday May 2 at 11:59pm** on GradeScope. 
 
 ## Schedule
 
