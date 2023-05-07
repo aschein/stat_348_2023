@@ -95,3 +95,11 @@ The University of Chicago
     - Matthew Stephen's [lecture notes](https://stephens999.github.io/fiveMinuteStats/gibbs1.html) on Gibbs sampling
     - Scott Linderman's [slides](https://github.com/slinderman/stats305c/blob/spring2023/slides/lecture04_mcmc.pdf) on MCMC
     - Gregory Gunderson's blogpost on [ergodic Markov chains](https://gregorygundersen.com/blog/2019/10/28/ergodic-markov-chains/)
+
+### Lecture 13 (May 4): Gibbs sampling (cont.): missing data, collapsed Gibbs, Geweke testing
+- Suggested readings:
+    - Chap 24.2 of Murphy (2012) [_Machine Learning: A Probabilistic Perspective_]
+    - David Blei's [lecture notes](http://www.cs.columbia.edu/~blei/fogm/2016F/doc/gibbs.pdf) on Bayesian mixtures and Gibbs sampling
+    - Stephens (2000): ["Dealing with label switching in mixture models"](https://stephenslab.uchicago.edu/assets/papers/Stephens2000b.pdf)
+    - Geweke (2004): ["Getting it Right: Joint Distribution Tests of Posterior Simulators"](http://qed.econ.queensu.ca/pub/faculty/ferrall/quant/papers/04_04_29_geweke.pdf)
+    - Roger Grosse's [blogpost](https://lips.cs.princeton.edu/testing-mcmc-code-part-2-integration-tests/) on Geweke testing
