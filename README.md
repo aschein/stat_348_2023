@@ -119,4 +119,14 @@ The University of Chicago
     - Matt Gormley's [slides](https://www.cs.cmu.edu/~mgormley/courses/10701-f16/slides/lecture20-topic-models.pdf) on LDA
     - Blei, Ng, Jordan (2003) ["Latent Dirichlet Allocation"](https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf)
     - Pritchard, Stephens, Donnelly (2000) ["Inference of Population Structure Using Multilocus Genotype Data"](https://academic.oup.com/genetics/article/155/2/945/6048111)
-    
+
+### Lecture 16 (May 16): Non-negative matrix factorization (NMF) and Poisson factorization
+- Suggested readings:
+    - Lee and Seung (1999) ["Learning the parts of objects by non-negative matrix factorization"](https://www.nature.com/articles/44565)
+    - Gillis (2014) ["The How and Why of Nonnegative Matrix Factorization"](https://arxiv.org/pdf/1401.5226.pdf)
+    - Gopalan et al. (2014) ["Scalable Recommendation with Poisson Factorization"](https://arxiv.org/pdf/1311.1704.pdf)
+
+### Lecture 17 (May 18): Wrap-up, review, future topics
+- Materials:
+    - [Slides](https://github.com/aschein/stat_348/blob/main/materials/17_wrapup.pdf)
+
